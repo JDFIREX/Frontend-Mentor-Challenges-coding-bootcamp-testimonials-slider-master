@@ -25,6 +25,7 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    transition: all 0.5s ease-in-out;
 }
 .wave_img{
     position: absolute;
@@ -55,11 +56,14 @@ main{
 .quote_box{
     margin-left: 7.81vw;
     width: 90%;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
 }
 .quote{
     font-weight: 300;
     color: hsl(240, 38%, 20%);
     font-size: 32px;
+    transition: all 0.5s ease-in-out;
 }
 .personal_box{
     margin-left: 7.81vw;
@@ -68,17 +72,20 @@ main{
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
+    transition: all 0.5s ease-in-out;
 }
 .name{
     font-weight: 700;
     color: hsl(240, 38%, 20%);
     font-size: 26px;
     margin-right: 10px;
+    transition: all 0.5s ease-in-out;
 }
 .job{
     font-weight: 300;
     color:hsl(240, 18%, 77%) ;
     font-size: 26px;
+    transition: all 0.5s ease-in-out;
 }
 .quote_img{
     position: absolute;
@@ -105,6 +112,7 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transition: all 0.5s ease-in-out;
 }
 .img{
     position: relative;
@@ -127,15 +135,17 @@ main{
     bottom: 25px;
     left: -85px;
     margin: 0;
-    z-index: -1;
+    z-index: 0;
     width: 540px !important;
     height: 540px;
+    transition: all 0.5s ease-in-out;
 }
 .img_person_svg{
     border-radius: 10px;
     width: 540px;
     height: 540px;
     box-shadow: 0px 15px 90px -45px hsl(240, 18%, 77%);
+    transition: all 0.5s ease-in-out;
 }
 .slider{
     position: absolute;
@@ -149,26 +159,32 @@ main{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    z-index: 20000000;
+}
+.left_btn{
+    width: auto;
+    height: auto;
+    z-index: 20000000;
+}
+.right_btn{
+    width: auto;
+    height: auto;
+    z-index: 20000000;
 }
 .left_btn_svg{
     margin-top: 5px;
     width: 20px;
     height: 30px;
+    z-index: 2;
 }
 .right_btn_svg{
     margin-top: 5px;
     width: 20px;
     height: 30px;
+    z-index: 2;
 }
 .slider::before{
-    content: '';
-    width: 1px;
-    height: 1px;
-    position: absolute;
-    z-index: -2;
-    border-radius: 100px;
-    background-color: none;
-    box-shadow: 30px -55px 80px 50px hsl(240, 18%, 77%);
+    visibility: hidden;
 }
 
 
@@ -363,7 +379,7 @@ main{
         font-size: 20px;
     }
     .info{
-        top: -2em
+        top: 1em
     }
     .job{
         margin: 0;
@@ -380,16 +396,16 @@ main{
     
     .img_box{
         width: 100%;
-        max-height: 50%;
+        max-height: 350px !important;
     }
     .img_bg{
         top: 3em;
         left: 25vw;
         width: 45vw;
-        height: 70%;
+        height: 90%;
     }
     .img_person{
-        bottom: 3em;
+        bottom: -0.5em;
         width: 35vw !important;
         height: auto;
     }
@@ -411,7 +427,7 @@ main{
         font-size: 20px;
     }
     .info{
-        top: -2em
+        top: 0em
     }
     .job{
         margin: 0;
@@ -435,7 +451,7 @@ main{
     
     .img_box{
         width: 100%;
-        max-height: 50%;
+        height: 300px !important;
     }
     .img_bg{
         top: 3em;
@@ -491,39 +507,42 @@ main{
         font-size: 18px;
     }
     .img_bg{
-        top: 3em;
-        left: 20vw;
-        width: 55vw;
+        top: 2.5em;
+        left: 14vw;
+        width: 70vw;
+        height: 90%;
     }
     .img_person{
-        bottom: 2em;
-        width: 45vw !important;
+        bottom: 0em;
+        width: 50vw !important;
         height: auto;
         
     }
     .img_person_svg{
-        width: 45vw !important;
+        width: 50vw !important;
         box-shadow: 0px 0px 40px -10px hsl(240, 18%, 77%)
     }
 }
 @media only screen and (max-width: 400px){
     .quote{
-        font-size: 20px;
+        font-size: 16px;
     }
     .name{
-        font-size:18px;
+        font-size:14px;
     }
     .job{
-        font-size: 18px;
+        font-size: 14px;
     }
     .img_bg{
         top: 3em;
-        left: 13vw;
+        left: 10vw;
         width: 75vw;
-        height: auto;
+        height:  auto;
     }
     .img_person{
-        bottom: 2.5em;
+        margin: 0;padding: 0;
+        top: 0.5em;
+        left: 0;
         width: 55vw !important;
         height: auto;
         
@@ -544,5 +563,12 @@ main{
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+    }
+    .quote_img{
+        top: -2em;
+    }
+    .quote_img_svg{
+        width: 3em;
+        height: 2em;
     }
 }
